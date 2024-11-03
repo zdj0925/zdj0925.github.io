@@ -1,7 +1,7 @@
 ## 欢迎光临
 
 种草很久一直没有写，
-
+git config --locale gommit.gpgsign true 
 本博客基于GITHUB pages 创立，后续将持续更新。
 
 ### Markdown
