@@ -56,6 +56,12 @@ layout: default
                 <!-- disqus 评论框 end -->
                 {% endif %}
 
+                {% if site.gittalk.enable %}
+                <!-- gitalk 评论框 start -->
+                {% include gitalk.html %}
+                <!-- gitalk 评论框 end -->
+                {% endif %}
+
                 {% if site.netease_comment %}
                 <!-- 网易云跟帖 评论框 start -->
                 <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
@@ -102,26 +108,6 @@ layout: default
 {% endif %}
 
 
-{% if site.gittalk %}
-  {% include gitalk.html %}
-<!-- div id="gitalk-container"></div>
-<link rel="stylesheet" href="/css/gitalk.css">
-<script src="/js/gitalk.min.js"></script>
-<script src="/js/md5.min.js"></script>
-<script type="text/javascript">
-    var gitalk = new Gitalk({
-        clientID: 'Ov23lirMf0ELVQekOmDu',
-        clientSecret: '14926c8b8592f942607f865b58acca4b1ec79fba',
-        repo: 'zdj0925.github.io',
-        owner: 'zdj0925',
-        admin: ['zdj0925'],
-        id: md5(location.href.match('/(?<=posts/)(.*)(?=/)/')[1]),
-        language: 'en',
-        perPage: 10,
-    });
-    gitalk.render('gitalk-container');
-</script -->
-{% endif %}
 {% if site.netease_comment %}
 <!-- 网易云跟帖JS代码 start -->
 <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>

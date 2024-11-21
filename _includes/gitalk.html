@@ -1,7 +1,9 @@
 <div id="gitalk-container"></div>
-<link rel="stylesheet" href="/css/gitalk.css">
+<!-- link rel="stylesheet" href="/css/gitalk.css" -->
+<link rel="stylesheet" href="{{ " /css/gitalk.css" | prepend: site.baseurl }}">
 <script src="/js/gitalk.min.js"></script>
 <script src="/js/md5.min.js"></script>
+<!-- gitalk config >
 <script type="text/javascript">
     var gitalk = new Gitalk({
         clientID: 'Ov23lirMf0ELVQekOmDu',
@@ -15,4 +17,19 @@
     });                                                                                                                            
     gitalk.render('gitalk-container');
 </script>
+< gitalk end -->
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '{{ site.gitalk.client_id }}',
+        clientSecret: '{{ site.gitalk.client_secret }}',
+        repo: '{{ site.gitalk.repo }}',
+        owner: '{{ site.gitalk.owner }}',
+        admin: ['{{ site.gitalk.admin }}'],
+        id: md5(location.href.match('/(?<=posts/)(.*)(?=/)/')[1]),
+        language: 'en',
+        perPage: 10,
+    });
+    gitalk.render('gitalk-container');
+</script>
+    
 
