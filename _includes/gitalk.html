@@ -5,11 +5,11 @@
 <script src="/js/md5.min.js"></script>
 <script type="text/javascript">
     var gitalk = new Gitalk({
-        clientID: '{{ data.gitalk.client_id }}',
-        clientSecret: '{{ data.gitalk.client_secret }}',
-        repo: '{{ data.gitalk.repo }}',
-        owner: '{{ data.gitalk.owner }}',
-        admin: ['{{ data.gitalk.admin }}'],
+        clientID: '{{ site.data.gitalk.client_id }}',
+        clientSecret: '{{ site.data.gitalk.client_secret }}',
+        repo: '{{ site.data.gitalk.repo }}',
+        owner: '{{ site.data.gitalk.owner }}',
+        admin: ['{{ site.data.gitalk.admin }}'],
         id: md5(location.href.match('/(?<=posts/)(.*)(?=/)/')[1]),
         language: 'en',
         perPage: 10,

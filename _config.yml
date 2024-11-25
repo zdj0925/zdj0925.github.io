@@ -92,15 +92,6 @@ service-worker: true
 
 # MathJax rendering for layout:page (e.g. post preview)
 page-mathjax: false
-
-gitlalk: true
-gitalk:
-  enable: true
-  github_id:  'zdj0925' # 你的Github ID/用户名
-  repo: 'zdj0925.github.io' # 评论存放的仓库名称，可以是Github Page(username.github.io)所在的仓库或者另建一个仓库
-  client_id: 'Ov23lirMf0ELVQekOmDu' # 前面拿到的Client ID
-  client_secret: '14926c8b8592f942607f865b58acca4b1ec79fba' # 前面拿到的Client secret
-
 # Friends
 friends:
   [
