@@ -12,7 +12,8 @@
         repo: '{{ site.data.gitalk.repo }}',
         owner: '{{ site.data.gitalk.owner }}',
         admin: ['{{ site.data.gitalk.admin }}'],
-        id: md5(location.href.match('/(?<=posts/)(.*)(?=/)/')[1]),
+	    <!-- id: md5(location.href.match('/(?<=posts/)(.*)(?=/)/')[1]), -->
+        id: md5(location.pathname),
         language: 'en',
         perPage: 10,
     });
