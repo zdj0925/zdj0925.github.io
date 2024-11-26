@@ -1,0 +1,15 @@
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<!-- 网易云跟帖JS代码 start -->
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script>
+  var cloudTieConfig = {
+    url: document.location.href,
+    sourceId: "{{ site.data.netease_comment.sourceId }}",
+    productKey: "{{ site.data.netease_comment.productKey }}",
+    target: "{{ site.data.netease_comment.target }}"
+  };
+  var yunManualLoad = true;
+  Tie.loader("{{ site.data.netease_comment,tie_loader }}", true);
+</script>
+<!-- 网易云跟帖JS代码 end -->
+
