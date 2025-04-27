@@ -20,7 +20,7 @@ async function getBingImg() {
         if (res.ok) {
             const data = await res.json()
             const randomIndex = Math.floor(Math.random() * data['images'].length)
-            console.log('获取bing每日壁纸成功:', data)
+            console.log('获取bing每日壁纸成功:', data,randomIndex, data['images'].length)
             return {
                 url: 'https://cn.bing.com' + data['images'][randomIndex]['url']
             }
