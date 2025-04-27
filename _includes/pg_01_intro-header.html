@@ -23,6 +23,9 @@
 {% endif %}
 
 {% if include.type == 'post' %}
+<!-- Post Header   -->
+<script src="/js/bing.js"></script>
+
     {% if page.header-style == 'text' %}
         <header class="intro-header style-text" >
     {% else %}
@@ -94,6 +97,7 @@
 {% endif %}
 
 {% if include.type == 'page' %}
+<!-- Page Header -->
 <script src="/js/bing.js"></script>
 
 <header class="intro-header" id="page-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">

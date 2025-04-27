@@ -16,12 +16,13 @@ async function getBingImg() {
      * @type {Response}
      */
     try {
-        const res = await fetch('https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN')
+        const res = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent('https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=8&mkt=zh-CN')}`)
         if (res.ok) {
             const data = await res.json()
+            const randomIndex = Math.floor(Math.random() * data['images'].length)
             console.log('获取bing每日壁纸成功:', data)
             return {
-                url: 'https://cn.bing.com' + data['images'][0]['url']
+                url: 'https://cn.bing.com' + data['images'][randomIndex]['url']
             }
         } else {
             console.warn('获取bing每日壁纸失败,状态码:', res.status)
@@ -29,14 +30,13 @@ async function getBingImg() {
     } catch (error) {
         console.error('获取bing每日壁纸失败:', error)
     }
-    return {
-        url: 'https://ghproxy.com/https://raw.githubusercontent.com/sgr997/images/main/blog/E66458F0-6245-4FD6-BD62-C1FAB8238D92.jpeg'
-    }
+
 }
 
 function changeImg() {
     getBingImg().then(res => {
-        const headerElement = document.getElementById('page-header');
+        //const headerElement = document.getElementById('page-header');
+        const headerElement = document.querySelector('header.intro-header');
         if (headerElement) {
             const img = new Image();
             img.src = res.url
@@ -54,4 +54,7 @@ function changeImg() {
     })
 }
 
-document.addEventListener('DOMContentLoaded', changeImg)
+document.addEventListener('DOMContentLoaded', function () {
+    changeImg()
+})
+
