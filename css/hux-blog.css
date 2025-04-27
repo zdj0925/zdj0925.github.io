@@ -1111,6 +1111,8 @@ samp {
   -o-background-size: cover;
   margin-bottom: 0px;
   /* 0 on mobile, modify by Hux */
+  opacity: 0;
+  transition: opactiy 1.5s ease-in-out;
 }
 .intro-header.style-text {
   background: none;

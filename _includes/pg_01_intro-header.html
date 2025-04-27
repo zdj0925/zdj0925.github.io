@@ -23,16 +23,16 @@
 {% endif %}
 
 {% if include.type == 'post' %}
-{% if page.header-style == 'text' %}
-<header class="intro-header style-text" >
-{% else %}
-<header class="intro-header" >
-{% endif %}
+    {% if page.header-style == 'text' %}
+        <header class="intro-header style-text" >
+    {% else %}
+        <header class="intro-header" >
+    {% endif %}
     <div class="header-mask"></div>
     {% if page.header-img-credit %}
-    <div class="header-img-credit">
-        Image by <a href="//{{page.header-img-credit-href}}">{{page.header-img-credit}}</a>
-    </div>
+        <div class="header-img-credit">
+            Image by <a href="//{{page.header-img-credit-href}}">{{page.header-img-credit}}</a>
+        </div>
     {% endif %}
     <div class="container">
         <div class="row">
@@ -94,7 +94,9 @@
 {% endif %}
 
 {% if include.type == 'page' %}
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+<script src="/js/bing.js"></script>
+
+<header class="intro-header" id="page-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
   <div class="header-mask"></div>
   <div class="container">
     <div class="row">
