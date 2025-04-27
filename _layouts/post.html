@@ -7,7 +7,7 @@ layout: default
 <!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
 
 <!-- Post Header -->
-{% include intro-header.html type='post' %}
+{% include ps_01_intro-header.html type='post' %}
 
 <!-- Post Content -->
 <article>
@@ -22,10 +22,10 @@ layout: default
 
                 <!-- Multi-Lingual -->
                 {% if page.multilingual %}
-                    {% include multilingual-sel.html %}
+                    {% include post_01_multilingual-sel.html %}
                 {% endif %}
-
-				{{ content }}
+                <!-- post_02_content  -->
+ 				{{ content }}
 
                 <hr style="visibility: hidden;">
                 <ul class="pager">
@@ -50,19 +50,19 @@ layout: default
 
                 {% if site.data.disqus.enable %}
                 <!-- disqus 评论框 start -->
-                {% include disqus.html %}
+                {% include post_disqus.html %}
                 <!-- disqus 评论框 end -->
                 {% endif %}
 
                 {% if site.data.gitalk.enable %}
                 <!-- gitalk 评论框 start -->
-                {% include gitalk.html %}
+                {% include post_gitalk.html %}
                 <!-- gitalk 评论框 end -->
                 {% endif %}
 
                 {% if site.data.netease_comment.enable %}
                 <!-- 网易云跟帖 评论框 start -->
-                {% include netease_comment.html %}
+                {% include post_netease_comment.html %}
                 <!-- 网易云跟帖 评论框 end -->
                 {% endif %}
             </div>  
@@ -91,10 +91,10 @@ layout: default
                 sidebar-container">
 
                 <!-- Featured Tags -->
-                {% include featured-tags.html bottom=true %}
+                {% include pg_03_featured-tags.html bottom=true %}
 
                 <!-- Friends Blog -->
-                {% include friends.html %}
+                {% include pg_04_friends.html %}
             </div>
         </div>
     </div>
@@ -102,7 +102,7 @@ layout: default
 
 <!-- add support for mathjax by voleking-->
 {% if page.mathjax %}
-  {% include mathjax_support.html %}
+  {% include post_03_mathjax_support.html %}
 {% endif %}
 
 {% if site.anchorjs %}

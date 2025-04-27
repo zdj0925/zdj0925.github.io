@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% include head.html %}
+{% include 01_head.html %}
 
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="">
 
-    {% include nav.html %}
-    {% include search.html %}
-
+    {% include 02_nav.html %}
+    {% include 03_search.html %}
+<!-- 04_body.html: content -->
     {{ content }}
 
-    {% include footer.html %}
+    {% include 05_footer.html %}
 
 
 <!-- Image to hack wechat -->

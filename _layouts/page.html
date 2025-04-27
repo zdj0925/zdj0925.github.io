@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!-- Page Header -->
-{% include intro-header.html type='page' %}
+{% include pg_01_intro-header.html type='page' %}
 
 <!-- Main Content -->
 <div class="container">
@@ -13,16 +13,17 @@ layout: default
     <!-- PostList Container -->
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1
       postlist-container">
+      <!-- pg_02_post-list -->
       {{ content }}
     </div>
     <!-- Sidebar Container -->
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1
       sidebar-container">
       <!-- Featured Tags -->
-      {% include featured-tags.html %}
+      {% include pg_03_featured-tags.html %}
 
       <!-- Friends Blog -->
-      {% include friends.html %}
+      {% include pg_04_friends.html %}
     </div>
     {% else %}
 
@@ -36,16 +37,16 @@ layout: default
     <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-12
       col-xs-12 sidebar-container">
       <!-- Featured Tags -->
-      {% include featured-tags.html %}
+      {% include pg_03_featured-tags.html %}
 
       <!-- Short About -->
-      {% include short-about.html %}
+      {% include pg_short-about.html %}
 
       <!-- Friends Blog -->
-      {% include friends.html %}
+      {% include pg_04_friends.html %}
 
       <!-- Ads -->
-      {% include ads.html %}
+      {% include pg_05_ads.html %}
     </div>
     {% endif %}
   </div>
